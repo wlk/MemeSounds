@@ -1,4 +1,4 @@
-package com.varwise.memesoundboard;
+package com.varwise.tromemesoundboard;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

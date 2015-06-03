@@ -1,4 +1,4 @@
-package com.varwise.memesoundboard;
+package com.varwise.trollmemesoundboard;
 
 import android.app.Activity;
 import android.media.AudioManager;
@@ -41,7 +41,7 @@ public class MainActivity extends Activity {
             R.raw.nyancat, R.raw.petergriffin,
             R.raw.police, R.raw.saxguy,
             R.raw.shit, R.raw.silenceikillyou, R.raw.syrena, R.raw.takemymoney, R.raw.thatswhatshesaid,
-            R.raw.thisissparta, R.raw.trololo, R.raw.whatdoesthefoxsay, R.raw.whatthefuck, R.raw.whatwhatwhat,
+            R.raw.thisissparta, R.raw.trololo, R.raw.whatthefuck, R.raw.whatwhatwhat,
             R.raw.youshallnotpass
     };
 

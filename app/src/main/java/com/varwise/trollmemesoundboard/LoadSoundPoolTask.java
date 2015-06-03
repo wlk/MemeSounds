@@ -1,4 +1,4 @@
-package com.varwise.memesoundboard;
+package com.varwise.trollmemesoundboard;
 
 import android.media.SoundPool;
 import android.os.AsyncTask;

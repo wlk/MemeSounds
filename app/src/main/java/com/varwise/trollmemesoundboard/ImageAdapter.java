@@ -1,13 +1,9 @@
-package com.varwise.memesoundboard;
+package com.varwise.trollmemesoundboard;
 
 import android.content.Context;
-import android.graphics.Point;
-import android.view.Display;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.BaseAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
 
 public class ImageAdapter extends BaseAdapter {
@@ -31,18 +27,10 @@ public class ImageAdapter extends BaseAdapter {
 
     // create a new ImageView for each item referenced by the Adapter
     public View getView(int position, View convertView, ViewGroup parent) {
-       /* WindowManager wm = (WindowManager) mContext.getSystemService(Context.WINDOW_SERVICE);
-        Display display = wm.getDefaultDisplay();
-        Point size = new Point();
-        display.getSize(size);
-
-        int imageSize = Math.min((size.x - 36)/ 3, 200);*/
-
         ImageView imageView;
         if (convertView == null) {
             // if it's not recycled, initialize some attributes
             imageView = new SquareImageView(mContext);
-            //imageView.setLayoutParams(new GridView.LayoutParams(200, 200));
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             imageView.setPadding(1, 1, 1, 1);
         } else {
@@ -66,7 +54,7 @@ public class ImageAdapter extends BaseAdapter {
             R.drawable.nyancat, R.drawable.petergriffin,
             R.drawable.police, R.drawable.saxguy,
             R.drawable.shit, R.drawable.silenceikillyou, R.drawable.syrena, R.drawable.takemymoney, R.drawable.thatswhatshesaid,
-            R.drawable.thisissparta, R.drawable.trololo, R.drawable.whatdoesthefoxsay, R.drawable.whatthefuck, R.drawable.whatwhatwhat,
+            R.drawable.thisissparta, R.drawable.trololo, R.drawable.whatthefuck, R.drawable.whatwhatwhat,
             R.drawable.youshallnotpass
     };
 }
