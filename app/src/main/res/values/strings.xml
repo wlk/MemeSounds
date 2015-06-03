@@ -1,6 +1,4 @@
 <resources>
     <string name="app_name">Meme Soundboard</string>
-
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="googleAnalytics">UA-54524356-14</string>
 </resources>
