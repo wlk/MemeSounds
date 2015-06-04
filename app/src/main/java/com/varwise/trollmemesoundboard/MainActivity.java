@@ -28,6 +28,7 @@ public class MainActivity extends Activity {
     public static GoogleAnalytics analytics;
     private AdView adView;
     private boolean adsEnabled = true;
+    private boolean appRateEnabled = false;
 
     public static final Integer[] rawSoundReferences = {
             R.raw.badum, R.raw.bazinga,
@@ -90,15 +91,17 @@ public class MainActivity extends Activity {
     }
 
     private void maybeShowAppRate() {
-        AppRate.with(this)
-                .setInstallDays(1)
-                .setLaunchTimes(2)
-                .setRemindInterval(1)
-                .setShowNeutralButton(true)
-                .setDebug(false)
-                .monitor();
+        if(appRateEnabled) {
+            AppRate.with(this)
+                    .setInstallDays(1)
+                    .setLaunchTimes(2)
+                    .setRemindInterval(1)
+                    .setShowNeutralButton(true)
+                    .setDebug(false)
+                    .monitor();
 
-        AppRate.showRateDialogIfMeetsConditions(this);
+            AppRate.showRateDialogIfMeetsConditions(this);
+        }
     }
 
     private void loadSoundPool() {
