@@ -8,8 +8,8 @@ android {
         applicationId "com.varwise.trollmemesoundboard"
         minSdkVersion 15
         targetSdkVersion 22
-        versionCode
-        versionName "1.0"
+        versionCode 9
+        versionName "1.0.7"
     }
     buildTypes {
         release {

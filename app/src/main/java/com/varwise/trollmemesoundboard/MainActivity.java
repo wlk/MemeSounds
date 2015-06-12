@@ -27,23 +27,40 @@ public class MainActivity extends Activity {
     private InterstitialAd interstitial;
     public static GoogleAnalytics analytics;
     private AdView adView;
-    private boolean adsEnabled = true;
-    private boolean appRateEnabled = false;
+    public static boolean adsEnabled = true;
+    public static boolean appRateEnabled = true;
 
     public static final Integer[] rawSoundReferences = {
-            R.raw.badum, R.raw.bazinga,
-            R.raw.bye, R.raw.challengeaccepted,
-            R.raw.dramatic, R.raw.fart,
-            R.raw.fuckoff, R.raw.fusrodah,
-            R.raw.gay, R.raw.headshot,
-            R.raw.heya, R.raw.hodor,
-            R.raw.idontwant, R.raw.killme,
-            R.raw.nooo, R.raw.nope,
-            R.raw.nyancat, R.raw.petergriffin,
-            R.raw.police, R.raw.saxguy,
-            R.raw.shit, R.raw.silenceikillyou, R.raw.syrena, R.raw.takemymoney, R.raw.thatswhatshesaid,
-            R.raw.thisissparta, R.raw.trololo, R.raw.whatthefuck, R.raw.whatwhatwhat,
-            R.raw.youshallnotpass
+            R.raw.badum,
+            R.raw.gay,
+            R.raw.nyancat,
+            R.raw.police,
+            R.raw.siren,
+            R.raw.headshot,
+            R.raw.challengeaccepted,
+            R.raw.fart,
+            R.raw.whatthefuck,
+            R.raw.dramatic,
+            R.raw.nope,
+            R.raw.killme,
+            R.raw.saxguy,
+            R.raw.silenceikillyou,
+            R.raw.nooo,
+            R.raw.shit,
+            R.raw.trololo,
+            R.raw.bazinga,
+            R.raw.bye,
+            R.raw.fusrodah,
+            R.raw.heya,
+            R.raw.hodor,
+            R.raw.idontwant,
+            R.raw.petergriffin,
+            R.raw.takemymoney,
+            R.raw.thatswhatshesaid,
+            R.raw.thisissparta,
+            R.raw.whatwhatwhat,
+            R.raw.youshallnotpass,
+            R.raw.fuckoff
     };
 
     @Override
@@ -107,12 +124,6 @@ public class MainActivity extends Activity {
     private void loadSoundPool() {
         LoadSoundPoolTask lspt = new LoadSoundPoolTask(soundPool, soundIds, this);
         lspt.execute();
-    }
-
-    private void unloadSoundPool() {
-        for (Integer soundId : soundIds) {
-            soundPool.unload(soundId);
-        }
     }
 
     private void showInterstitial() {
